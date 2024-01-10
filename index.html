@@ -3,7 +3,13 @@
     <head>
         <title>beefinstall</title>
         <style>
+            @font-face {
+            font-family: "Roboto";
+            src: url("Roboto/Roboto-Regular.ttf");
+            }
+
             body {
+                font-family: Roboto;
                 background-color: #d8c9c9;
             }
             .box {
@@ -16,32 +22,71 @@
     <body>
         <div class="box">
             <h2>beefinstall</h2>
-            <p>
-                This website explains the ways you can install the <a href="https://www.beeflang.org/">Beef programming language</a> on your systems and also contains some further new user help.
-            </p>
-            <h3>Windows</h3>
-            <h4>Prebuild</h4>
-                Download the latest nightly or full version from the <a href="https://www.beeflang.org/">beef website</a>.
-                Downloading the nightly is currently recommended as the nightly contains major bugfixes that are not available in the newest release.
-                This will also install the beef ide which is currently only available on windows.
-                <br> - <a href="https://nightly.beeflang.org/BeefSetup.exe">Newest Nightly</a>
-                <br> - <a href="https://www.beeflang.org/setup/BeefSetup_0_43_4.exe">0.43.4</a>
-            <h4>From source</h4>
-                Install the requirements listed on the <a href="https://www.beeflang.org/docs/getting-start/building/">beef website</a> and follow the steps, mainly running the install script.
-            
-            <h3>Linux</h3>
-            <h4>Prebuild</h4>
-            The currently most official thing you can get rn is the .deb package for BeefBuild maintained by me.
-            The apt repository is hosted at <a href="https://beefinstall.com/Repo/">https://beefinstall.com/Repo/</a>.
-            Scripts for registering this repository or even building beef or a apt repository yourself are hosted on <a href="https://github.com/Booklordofthedings/Beefdev-Utils">Github</a>. <br>
-            <code>wget -qO - https://raw.githubusercontent.com/Booklordofthedings/Beefdev-Utils/main/InstallAptFromKey.sh | bash</code> <br>
-            <code>apt install beefbuild</code> <br>
-            <h4>Build from source</h4>
-            Install the requirements listed on the <a href="https://www.beeflang.org/docs/getting-start/building/">beef website</a> and follow the steps, mainly running the install script.
-            <b>THIS WILL COMPILE LLVM, SO IT MIGHT TAKE A LONG TIME TO COMPLETE</b> (~20min on my Ryzen 7 5700X)
-
             <hr>
-            <a href="https://github.com/Booklordofthedings">(C) 2023 - Booklordofthedings</a>
+            <h3>Beefbuild on Windows</h3>
+                <details style="margin:0.5rem">
+                    <summary><b>Prebuild</b></summary>
+                    <div>
+                        <ul>
+                            <li>Download the version you want from <a href="https://www.Beeflang.org">Beeflang.org</a></li>
+                            <li>If the current version is not higher than 1.0 yet you should download the nightly</li>
+                            <li>Run the installer and select the options you want</li>
+                            <li>The installer can also be opened as a zip by zip programs, if you want to preview the files or install manually</li>
+                        </ul>
+                    </div>
+                </details>
+                <details style="margin:0.5rem">
+                    <summary><b>From source</b></summary>
+                    <div>
+                        Prerequisites
+                        <ul>
+                            <li>Microsoft C++ build tools >= Visual Studio 2017</li>
+                            <li>Platform Toolset 141</li>
+                            <li>Windows SDK 10.0.17763.0</li>
+                            <li>CMake >= 3.15</li>
+                            <li>Python >= 3.6</li>
+                            <li>git cli</li>
+                        </ul>
+                        <ul>
+                            <li>Clone the Beef <a href="https://github.com/beefytech/Beef">Repostiory</a></li>
+                            <li>Run the build scrip located at bin/build.bat</li>
+                            <li>The output will be available in IDE/dist</li>
+                        </ul>
+                    </div>
+                </details>
+            
+            <h3>BeefBuild on Linux</h3>
+                <details style="margin:0.5rem">
+                    <summary><b>Prebuild</b></summary>
+                    <div>
+                        <ul>
+                            <li>There is a third party apt repository maintained by me, which contains the .deb packages for beefbuild</li>
+                            <li>The repository is hosted at <a href="https://beefinstall.com/Repo/">beefinstall.com/Repo/</a></li>
+                            <li>There is a oneliner script that you can use to register the repository</li>
+                            <li>Aftertwards you are able to install beefbuild using apt</li>
+                        </ul>
+                        <code>wget -qO - https://raw.githubusercontent.com/Booklordofthedings/Beefdev-Utils/main/InstallAptFromKey.sh | bash</code> <br>
+                        <code>apt install beefbuild</code> <br>
+                    </div>
+                </details>
+                <details style="margin:0.5rem">
+                    <summary><b>From source</b></summary>
+                    <div>
+                        Prerequisites
+                        <ul>
+                            <li>CMake >= 3.15</li>
+                            <li>Python 2.7</li>
+                            <li>Git</li>
+                        </ul>
+                        <ul>
+                            <li>Clone the Beef <a href="https://github.com/beefytech/Beef">Repostiory</a></li>
+                            <li>Run the build scrip located at bin/build.sh</li>
+                            <li>The output will be available in IDE/dist</li>
+                        </ul>
+                    </div>
+                </details>
+            <hr>
+            Maintained by Booklordofthedings | This is an unofficial website and not affiliated with Beefytech | The source code for this website is available on <a href="https://github.com/Booklordofthedings/Beefdev-Website">Github</a>
         </div>
     </body>
 </html>
